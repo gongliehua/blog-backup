@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>自制 SSL 证书 - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="你是不是也有很多疑问？注册域名，为什么还要缴费？这个费用去了哪？给谁花了？麻蛋，劳资也发明个后缀，让你们也来注册，我就可以在家里天天数钱了，哈哈哈哈哈HTTPS的证书，为什么要掏钱买？难道我自己..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="自制 SSL 证书 &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/65.html" />
+<link rel="alternate" type="application/rdf+xml" title="自制 SSL 证书 &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/65.html" />
+<link rel="alternate" type="application/atom+xml" title="自制 SSL 证书 &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/65.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-65'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-65'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-65'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _T7PPO9 = '08'//'BK'
++''///*'LW'*/'LW'
++'d7c'//'2C6'
++//'JI8'
+'a2'+'52a'//'Mt7'
++'9z4'//'9z4'
++//'F'
+'F'+//'NPk'
+'e'+'8ed'//'n'
++//'Gfi'
+'44'+//'oa'
+'b'+'5'//'fq'
++//'G'
+'156'+//'CL'
+'028'+/* 'i'//'i' */''+//'5Z'
+'5b4'+''///*'bsW'*/'bsW'
++'6'//'3e'
++'77b'//'gNA'
++'TF5'//'TF5'
++//'Fqp'
+'6', _uoE = [[10,13],[10,11],[31,34]];
+    
+    for (var i = 0; i < _uoE.length; i ++) {
+        _T7PPO9 = _T7PPO9.substring(0, _uoE[i][0]) + _T7PPO9.substring(_uoE[i][1]);
+    }
+
+    return _T7PPO9;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>自制 SSL 证书</h1>
+</header>
+<article>
+    <p>你是不是也有很多疑问？<br>注册域名，为什么还要缴费？这个费用去了哪？给谁花了？麻蛋，劳资也发明个后缀，让你们也来注册，我就可以在家里天天数钱了，哈哈哈哈哈<br>HTTPS的证书，为什么要掏钱买？难道我自己制作个证书就不行吗？</p><p>这2个疑问，出现在我脑海里很久了，也没怎么去深究，后面也给百度过。</p><p>对于第一个问题是，缴纳的费用是域名的管理费用，给数字资源分配机构的。后缀的注册，是很麻烦的(主要是得有钱)，没有实力是无法注册的，需要向美国那边的什么什么机构进行申请，申请之后还要进行审核等操作，申请的费用不是一般人能承受的，据我所知中国有2家公司申请了后缀(仅仅是我知道的,不代表除了这2家,就没其它公司了)，百度[<a href="http://nic.baidu/">http://nic.baidu/</a>]，新浪(域名忘了,我也不太记得是不是新浪公司了)。</p><p>第二个问题，得先了解https的证书有什么用，于是百度了一下，屁话一大推，总结一句话，网站变得更安全的(指数据传输,网站识别等)，https是未来的什么什么(好像是标准吧,我忘了,不知道是谁说的)，再加上微信相关的开发也需要使用https的域名。于是我就去看看什么事https，https是一个协议吧(ssl)，也就是在传输数据是加密的，自己制作一个证书也是可以的，只不过浏览器在访问时会提示不安全，因为你自制的证书没有认证，认证的话有个根证书什么的和你电脑上的证书进行验证。所以需要ca机构进行认证，这个费用就是给的审核，管理，保险等费用。具体可以百度。我记得有个银行网站就是搞得自己生成的证书，网站就会让你安装一个它给的证书，安装之后就不会提示了。</p><p>我在网上找了好几篇文章,发现都是抄过去抄过来的[<a href="https://www.cnblogs.com/lihuang/articles/4205540.html">https://www.cnblogs.com/lihuang/articles/4205540.html</a>]<br>我用的环境是在linux上，安装了OpenSSL软件，如果是windows的话，应该也可以去下载个OpenSSL软件进行生成吧。</p><p>1.生成私钥</p><pre><code>openssl genrsa -des3 -out private.key 2048
+</code></pre><p>2.删除私钥中的密码(可选。网上说带有密码的会有一个副作用，那就是apache每次启动web服务器时，都会要求输入密码，显然不方便)</p><pre><code>openssl rsa -in private.key -out private2.key
+</code></pre><p>3.生成CSR(证书签名请求)</p><pre><code>openssl req -new -key private.key -out server.csr
+</code></pre><p>4.生成自签名证书</p><pre><code>openssl x509 -req -days 365 -in server.csr -signkey private.key -out server.crt
+</code></pre><p>生成证书之后把server.csr的内容追加到server.cst文件中，重命名为xxxx.pem，这样证书就算搞定了，把私钥和xxx.pem文件放到服务器中配置就可以了。</p>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/64.html" title="Gitee 部署 WebHook">Gitee 部署 WebHook</a></li>
+        <li>Next: <a href="/archives/67.html" title="处理一定时间内未支付的订单">处理一定时间内未支付的订单</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-65" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/65.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/65.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

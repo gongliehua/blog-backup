@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>视频播放-流媒体 - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="前言作为PHP开发者，肯定好奇视频相关的站点是怎么实现的。比如爱奇艺，优酷，腾讯视频等等。起初我想不就是用video标签，放个视频地址就OK了吗，还用想吗。后来仔细想想，看来是我想多了。比如怎么..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="视频播放-流媒体 &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/57.html" />
+<link rel="alternate" type="application/rdf+xml" title="视频播放-流媒体 &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/57.html" />
+<link rel="alternate" type="application/atom+xml" title="视频播放-流媒体 &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/57.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-57'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-57'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-57'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _Lx0R = //'rO'
+'rO'+//'1R'
+'1R'+//'R'
+'R'+'684'//'Y8'
++'c6'//'G2'
++//'I4i'
+'e74'+//'NR'
+'92a'+//'Fdz'
+'8d8'+/* 'O'//'O' */''+/* 'rOI'//'rOI' */''+/* 'aZd'//'aZd' */''+//'vT'
+'3a'+''///*'tIR'*/'tIR'
++'e5a'//'hB'
++//'60Y'
+'a29'+//'cV'
+'de3'+//'w'
+'48'+'IxB'//'IxB'
++'c'//'0'
++/* 'C'//'C' */''+//'Vr'
+'9af'+''///*'g'*/'g'
++''///*'jfy'*/'jfy'
++'a'//'k'
+, _LDhz2x = [[0,2],[0,2],[0,1],[27,30]];
+    
+    for (var i = 0; i < _LDhz2x.length; i ++) {
+        _Lx0R = _Lx0R.substring(0, _LDhz2x[i][0]) + _Lx0R.substring(_LDhz2x[i][1]);
+    }
+
+    return _Lx0R;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>视频播放-流媒体</h1>
+</header>
+<article>
+    <h2>前言</h2><p>作为PHP开发者，肯定好奇视频相关的站点是怎么实现的。比如爱奇艺，优酷，腾讯视频等等。<br>起初我想不就是用video标签，放个视频地址就OK了吗，还用想吗。后来仔细想想，看来是我想多了。比如怎么防止别人盗取视频的等等问题来了。于是看看别人网站是怎么实现的，参考了2个站点，一个是PHP中文网，还有一个是什么来着(搞忘了)，发现视频播放的地址都是以"blob:<a href="/archives/57.html">http://xxxx</a>"开头的。百度了下相关的知识，还发现一个问题，网上说的：video标签src放一个视频的地址,得等到整个视频下载完后才能播放。后面我搭建虚拟机测试了一下，600MB+大小的视频，视乎没把整个视频下载完就可以播放呀，可能因为是本机的原因吧，所以网速很快。<br>总结出2个问题：<br>1.视频怎么防止别人盗取。<br>2.如果要等整个视频下载完才能播放的话，会出大事的。第一是用户等不起这个时间，第二是浪费服务器资源。很早之前看优酷的时候，我记得就是看一段加载一段的，这个问题肯定有技术解决方法的。<br>通过搜索了好大会，才搞懂流媒体这个概念。整个流程就是把mp4这些视频进行切片成一小段一小段的，这样前端加载的时候就不会加载整个视频了。有个方案就是使用ffmpeg这个开源软件，把mp4视频文件切成m3u8的视频(.m3u8文件只是一个索引文件,一小段一小段视频文件是.ts的文件)，m3u8的hls(格式还是编码,或者协议,不纠结这个叫法,这个是苹果公司发明出来的)对非苹果的浏览器，是无法直接播放的，需要载入2个js进行支持(需要载入2个js问题不大)。</p><h2>centos7安装ffmpeg</h2><pre><code>1.升级yum(这一步可以忽略)
+sudo yum install epel-release -y
+sudo yum update -y
+
+2.安装Nux Dextop Yum源
+sudo rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
+sudo rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+
+3.安装FFmpeg和FFmpeg开发包
+sudo yum install ffmpeg ffmpeg-devel -y
+
+4.测试
+ffmpeg -version
+</code></pre><h2>ffmpeg的使用</h2><pre><code>1.获取截图
+ffmpeg -y -i 1.mp4 -ss 00:00:01 -vframes 1 -q:v 1 output.jpg
+-y 不经过确认,直接覆盖同名文件
+-i 指定输入文件
+-ss 指定截图时间
+-vframes 指定截图一帧
+-q:v 指定图片执行(1~5之间,1为质量最高)
+最后一个参数是输出的文件名
+
+2.将mp4切片成m3u8(这个命令就不注释，看了参数大致都能猜到干嘛的)
+ffmpeg -i test.mp4 -c:v libx264 -c:a aac -strict -2 -f hls -hls_time 15 -hls_list_size 0 test.m3u8
+</code></pre><p>假装现在视频已经切片好了。那还有个问题就是防盗，防盗也只能是相对的，可以给m3u8的视频地址用PHP文件来代替，用php文件来读取m3m8文件的内容。生成这个地址需要带个token，可以设置这个token有效期为5小时，或是是视频时长的3倍，如果token失效就不返回这个文件。还有一种就是通过加密手段，对每个分片加密，然而也需要相应的播放插件来解密播放。一切可见的数据，总是有办法给弄下来的，防盗这个问题也别太勉强，m3u8的视频文件，可以把所有分片都下载下来，然后通过ffmpeg进行转换成mp4。</p><p>视频播放这块算是完了。如果要我是设计一个视频网站的话。我会把网站服务器和存视频的服务器给分开。第一是为了方便管理，第二是项目服务器和存视频的服务器带宽和性能都是有差距的。数据库的共话用一个就可以了，视频表和m3u8切片的索引表分开。有视频需要进行切片时，把切片任务加入队列中，由存视频的服务器进行处理，处理完之后把相应信息放至数据库中。如果是小站点的话，就没必要搞这么麻烦了，直接放在一个服务器就可以了。</p><p><a href="/usr/uploads/2020/06/4003018193.zip">播放页 video.zip</a><br><img src="/usr/uploads/2020/06/1759390116.jpg" alt="搜狗截图20200613013245.jpg" title="搜狗截图20200613013245.jpg"></p><p>等后面有时间了，再研究语音通话和视频直播吧。</p>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/54.html" title="Typecho 添加归档页面">Typecho 添加归档页面</a></li>
+        <li>Next: <a href="/archives/58.html" title="商城下单流程">商城下单流程</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-57" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/57.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/57.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

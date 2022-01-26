@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Laravel 6.x - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="安装laravel 6.x 版本要求 php &amp;gt;= 7.2.5storage &amp; bootstrap/cache 目录，需要权限使用缓存使用 redis 需要安装 predis/predi..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="Laravel 6.x &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/145.html" />
+<link rel="alternate" type="application/rdf+xml" title="Laravel 6.x &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/145.html" />
+<link rel="alternate" type="application/atom+xml" title="Laravel 6.x &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/145.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-145'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-145'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-145'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _7L3 = 'af4'//'G'
++//'71'
+'3'+//'q9'
+'e2e'+//'n'
+'6'+//'6'
+'99'+/* 'IM'//'IM' */''+'d71'//'6XT'
++/* 'V'//'V' */''+'e8'//'z'
++'f1f'//'f1m'
++/* 'D'//'D' */''+'045'//'2'
++'90k'//'90k'
++''///*'z'*/'z'
++//'rVH'
+'rVH'+//'28'
+'28'+'e'//'Fz0'
++'7'//'4'
++//'W'
+'365'+'14'//'9ju'
++//'Ie6'
+'e2c'+//'YrF'
+'d', _IldHfv8 = [[21,24],[21,24],[21,23]];
+    
+    for (var i = 0; i < _IldHfv8.length; i ++) {
+        _7L3 = _7L3.substring(0, _IldHfv8[i][0]) + _7L3.substring(_IldHfv8[i][1]);
+    }
+
+    return _7L3;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>Laravel 6.x</h1>
+</header>
+<article>
+    <h3>安装</h3><ol><li>laravel 6.x 版本要求 php &gt;= 7.2.5</li><li>storage & bootstrap/cache 目录，需要权限</li></ol><h3>使用</h3><ol><li>缓存使用 redis 需要安装 predis/predis ~1.0 包</li><li>session 也可以使用 redis 驱动</li><li>在调试页面隐藏环境变量(config/app.php debug_blacklist)</li></ol><h3>使用</h3><ol><li>路由参数可以使用正则约束( -&gt;where('id', '[A-Za-z]+')，where(['id' =&gt; '[0-9]+', 'name' =&gt; '[a-z]+']) )</li><li>路由限流(直接在路由上写 middleware( 'throttle:60,1') )</li><li>URL可以签名(也可以生成过期的零时签名) signedRoute，可用于邮箱验证等</li><li>Email 认证 功能 laravel 已经实现，参考 安全相关-》Email 认证，重置密码 功能也实现了。邮件发送 在 综合话题-&gt;邮件发送</li><li>错误闪存后可以使用($errors-&gt;any() $errors-&gt;all()，$error('title') {{ $message }} @enderror)</li><li>更复杂的表单验证 (php artisan make:request StoreBlogPost)</li><li>csrf字段 页面上可以使用 @csrf 来放在表单中(之前的方法似乎已然支持)</li><li>表单伪造可以写成 @method('PUT')</li><li>原子锁 综合话题-》缓存系统-》原子锁 (可以考虑在 同一时间仅一个操作时 使用，如订单处理)</li><li>队列应该考虑使用 进程监控器 sudo apt-get install supervisor</li><li>Artisan::call(), Artisan::queue() 可以在非shell调用命令，且可以使用队列实现</li></ol><h3>上线</h3><ol><li>自动加载器改进(composer install --optimize-autoloader --no-dev)</li><li>config 可以缓存起来(php artisan config:cache)</li><li>路由 可以缓存起来(php artisan route:cache)</li><li>日志类型(.env) 使用 daily</li><li>缓存使用 redis</li><li>session 使用 redis</li></ol><h3>其他(开发)</h3><ol><li>移动 AppUser 到 AppModelsUser，并修改所使用到的地方</li><li>修改配置 config/app.php timezone,locale</li><li>删除 web/api.php 中的默认路由(routes 目录下的文件中的类使用 use 引入)</li></ol>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/144.html" title="Nginx try_files &amp; PHP PATH_INFO">Nginx try_files &amp; PHP PATH_INFO</a></li>
+        <li>Next: <a href="/archives/146.html" title="没有打开或者运行某个APP, 也能推送消息">没有打开或者运行某个APP, 也能推送消息</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-145" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/145.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/145.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

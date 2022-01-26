@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>注册域名的一些心得 - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="接触互联网有6、7年了，今天在群里再次谈起了注册域名，这是第二次谈起了。如果你想注册的域名被别人注册了，想收购又买不起，可以看这篇文章哟。做个笔记，也许有人会看，以下是聊天记录，重要的是最后一段..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="注册域名的一些心得 &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/123.html" />
+<link rel="alternate" type="application/rdf+xml" title="注册域名的一些心得 &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/123.html" />
+<link rel="alternate" type="application/atom+xml" title="注册域名的一些心得 &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/123.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-123'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-123'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-123'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _BPScpZ = '4c'//'i4'
++'7eb'//'g'
++//'ibn'
+'e11'+'dNa'//'dNa'
++'f'//'wKo'
++//'g'
+'0bd'+/* '48W'//'48W' */''+'9OH'//'9OH'
++//'3Cc'
+'fd'+'95'//'fnx'
++'8'//'C'
++//'np5'
+'1'+''///*'o'*/'o'
++'3e1'//'sdf'
++'674'//'cal'
++'7c'//'r'
++//'xhl'
+'411'+'8'//'KMu'
++'0b'//'y42'
+, _MSFzD = [[8,11],[12,15]];
+    
+    for (var i = 0; i < _MSFzD.length; i ++) {
+        _BPScpZ = _BPScpZ.substring(0, _MSFzD[i][0]) + _BPScpZ.substring(_MSFzD[i][1]);
+    }
+
+    return _BPScpZ;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>注册域名的一些心得</h1>
+</header>
+<article>
+    <p>接触互联网有6、7年了，今天在群里再次谈起了注册域名，这是第二次谈起了。如果你想注册的域名被别人注册了，想收购又买不起，可以看这篇文章哟。做个笔记，也许有人会看，以下是聊天记录，重要的是最后一段话。</p><p><hr></p><p><img src="/usr/uploads/2021/08/465554367.png" alt="微信图片_20210815221337.png" title="微信图片_20210815221337.png"></p><pre><code>1:
+这应该是最贵的后缀了吧
+
+铭少:
+@1 有没有便宜的2位域名
+
+1:
+有啊，好米都没了。除了外国人不懂的双拼。
+
+STR:
+双拼中国人也没多少懂的啊
+
+1:
+最便宜的就是俄罗斯的 .ru 了
+俄罗斯国家基本每个小店铺都有一个网站，且 nginx 就是给它们国家访问量排第二的网站而开发的。
+想想可知，互联网历史应该比中国发展早，发展的快些吧。
+不过也有漏的，说不清楚这个 之前我看 65535.ru 可以注册，不知道现在还可以不，可能是他们国家对数字不在乎，外国人宁愿用很长的单词拼着注册，也不会用一些简写什么的。我之前看到个域名好几个单词拼着来的。
+
+STR:
+65535有什么人特殊意义？
+
+1:
+便宜的2字母域名有很多，比如gy后缀等，价格应该在100到500之间。
+sf.gg 感觉这个短域名就很灵性
+除此之外感觉 t.tt 3.cn 除了价格高，好像并没起到多大作用。
+
+1:
+2^16 - 1
+
+1:
+3.cn 好像还是有那么点价值的，感觉花那么多钱弄个短域名跳转有点划不来。像中国联通，携程，网易，微软等，后缀都用的是些比较个性的后缀，如 .lu .lt .co .so .ms等，域名还有用杂米的，短网址弄个短的就行。不差钱的那种，当我没说。
+
+1:
+我最早注册的域名是
+localhost.com.ru
+应该是15年左右注册的，续费2年还是几年后就没续费，给掉了，后面有人给捡了。
+
+再后来我在阿里云看见 localhost.cc 挂在卖，当时挂的600还是几百，当时想买，想了想买了没啥用就没买。
+
+然后辗转 注册了 status.cx
+再后来看见 sha1.cn 挂着卖，不到1千，然后给买了，我感觉我亏了。
+
+感觉价格合理，有收藏价值及升值空间的域名有
+func.cn 挂着卖3k(我不是卖家,想入手来着，观察了几个月)
+还未注册感觉有收藏价值的域名有
+webhp.cn
+phpar.cc
+
+从15年开始接触域名。学费倒是交了些许。净瞎整这些没用的，想靠这发财，得早点睡觉做梦才行。不说0几年，要是1几年有点头脑弄些域名放到现在，感觉就能发财了。
+
+还是专心搞技术吧。好米早没了，有些米倒腾来倒腾去不知道倒了多少次了，好米一般人收购不起。你还别说有些东西也不一定 我之前看 qqfamily.com 在一个私人手里，现在好像在腾讯手里去了，我觉得可能是收购的，也可能打的官司。
+
+跟写论文似的，巴拉巴拉的，哈哈哈。看会电视，准备睡觉啦。拜
+
+域名注册价格的数据 是从趣域网 摘录的。
+
+自己可以去看看。
+
+1:
+com cn 别说好域名没有了，现在就连双拼毛都不剩。
+要是想给公司注册域名 可以使用谐音 或者简称，千万别用杂米(特殊除外，如 i4.cn)，也别用个性后缀(千万别用,至少官网千万不能用,其他产品另说)，记住com为王，cn也行，很多公司比较倾向于cn 我遇到过有com不注册，仅注册cn的互联网公司，以上是后缀及品相选择，名称部分 公司产品面向中国人最好用双拼，面前全国或者走国际化最好用单词，如果想要单词被注册了 可以尝试在单词前面或者后面加beta，buf，best，51，91之类的，域名例子：
+cnbeta.com
+namebeta.com
+freebuf.com
+51不举了例子很多
+
+如果是拼音可以加谐音
+参考例子
+wooyun.org
+wooduan.com
+yahoo.com
+qihoo.com
+</code></pre>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/122.html" title="相对URL转绝对URL">相对URL转绝对URL</a></li>
+        <li>Next: <a href="/archives/127.html" title="域名解析">域名解析</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-123" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/123.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/123.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

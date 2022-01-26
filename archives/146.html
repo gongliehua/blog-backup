@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>没有打开或者运行某个APP, 也能推送消息 - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="早期 Android 手机系统、品牌鱼龙混杂，乱七八糟的，硬件跟不上软件的节奏，即使手机没存储空间了，各大软件厂商(非系统厂商)都还是要推荐安装它的软件，生怕自己没位置一样。早期火热的品牌有 中..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="没有打开或者运行某个APP, 也能推送消息 &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/146.html" />
+<link rel="alternate" type="application/rdf+xml" title="没有打开或者运行某个APP, 也能推送消息 &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/146.html" />
+<link rel="alternate" type="application/atom+xml" title="没有打开或者运行某个APP, 也能推送消息 &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/146.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-146'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-146'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-146'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _mLAb = 'c60'//'hox'
++//'Qs'
+'e'+//'ko'
+'24'+/* '16'//'16' */''+'a44'//'Qb0'
++'540'//'p'
++//'fj'
+'d35'+'467'//'4'
++//'IT'
+'7'+'948'//'Oa6'
++'f'//'f'
++'645'//'rS'
++//'K'
+'a'+/* 'sG'//'sG' */''+'31'//'fk'
++/* 'p'//'p' */''+''///*'Ev'*/'Ev'
++'0fd'//'N'
++//'t'
+'3', _9Jg = [[22,23]];
+    
+    for (var i = 0; i < _9Jg.length; i ++) {
+        _mLAb = _mLAb.substring(0, _9Jg[i][0]) + _mLAb.substring(_9Jg[i][1]);
+    }
+
+    return _mLAb;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>没有打开或者运行某个APP, 也能推送消息</h1>
+</header>
+<article>
+    <p>早期 Android 手机系统、品牌鱼龙混杂，乱七八糟的，硬件跟不上软件的节奏，即使手机没存储空间了，各大软件厂商(非系统厂商)都还是要推荐安装它的软件，生怕自己没位置一样。<br>早期火热的品牌有 中兴、金立、酷派、朵唯、联想、诺基亚等，当然这里只是举例了现在市场上几乎看不见的品牌。<br>现在的市场已经被大厂商给包了(如 小米、华为、OPPO、VIVO等)，几乎看不见之前举例的品牌，或者是杂牌机。</p><p>在 Android 上，有个权限叫开机自启动，跟电脑上的自启动是差不多的意思，以前的手机，系统资源不够使用，为什么让系统流程些，我都会把所有软件的自启动都给关闭掉。如果软件启动后，时不时就会给你推送一些消息(当然你可以给它设置权限，它推送的消息就不会出现在你眼前或者状态栏了)。</p><p>我是非常反感 APP 给推送消息的，因为推送的几乎都是一些没用的消息，搞得状态栏消息一推一推的。就跟打广告一样，推销自己的东西，实际上 low 得一匹，东西也不咋样，只不是为了占到系统的一部分资源，它可能就觉得是占到整个市场的资源，这样只会适得其反。</p><p>2020年，我换了新一部新的手机(Mi 10)，我之前也用过好几个小米的手机，因为它的UI非常的漂亮，干净，功能也贴心，实在，深受广大用户喜爱，我也喜欢。<br>我主要是看中一点 系统干净，不像杂牌机那种，不管是界面，还是软件都眼花缭乱的。拿到手后，一如既往的禁止所有软件 自动启动。但事实上我只要一打开数据，通知栏就会出现各种APP推送的消息。<br>我以为是系统的自启动管理出 bug 了，管不住这些软件了，可能是这些软件利用 Android 新版本的特性而无视自启动，那么小米系统也太 low 了吧，我之前一直觉得小米系统软件做的不错，没想到还出这幺蛾子。</p><p>直达 2021年11月，我想让阿里云的企业邮箱 收到邮件后，能够在微信上通知我，似乎没有阿里云企业邮箱的小程序之类的，没办法我只能看看QQ邮箱了，最终可能也只能是阿里云企业邮箱收到邮件后，转发到QQ邮箱了。在看QQ邮箱客户端时(我手机上一直都安装着和使用 QQ邮箱)，发现了 左上角头像-&gt;功能设置-&gt;隐私-&gt;第三方SDK 中的描述，终于解答了我一年多来的困惑。</p><p>软件并没有启动，也能推送消息(特别是一段时间后 打开数据就有消息推送)，其实是系统推的，并不是软件推的。</p>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/145.html" title="Laravel 6.x">Laravel 6.x</a></li>
+        <li>Next: <a href="/archives/148.html" title="谷歌浏览器自带的游戏">谷歌浏览器自带的游戏</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-146" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/146.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/146.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Nginx try_files &amp; PHP PATH_INFO - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="try_files $uri $uri/ /index.php?$query_string;这句的话得意思是依次找 文件，找目录，找index.php 在找的过程中，如果存在就执行并不往后面找了..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="Nginx try_files &amp; PHP PATH_INFO &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/144.html" />
+<link rel="alternate" type="application/rdf+xml" title="Nginx try_files &amp; PHP PATH_INFO &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/144.html" />
+<link rel="alternate" type="application/atom+xml" title="Nginx try_files &amp; PHP PATH_INFO &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/144.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-144'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-144'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-144'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _IQXTDQk = //'T7'
+'T7'+//'A'
+'f1b'+'14'//'t5'
++/* 'y'//'y' */''+//'m'
+'6a'+//'VoT'
+'13d'+'988'//'Aq'
++'d6'//'X8'
++'ba'//'a'
++''///*'H'*/'H'
++//'5p'
+'6e'+/* 'Zu'//'Zu' */''+'c1'//'Z'
++''///*'Mp'*/'Mp'
++/* 'wYF'//'wYF' */''+''///*'6'*/'6'
++'3'//'Yt5'
++//'3'
+'de'+//'Pm'
+'9'+//'Jj'
+'9'+'8'//'f'
++'d'//'8G'
++''///*'MD'*/'MD'
++//'sve'
+'6'+'e9'//'Di'
++//'k0E'
+'k0E'+'5'//'j'
+, _0PzWl3 = [[0,2],[31,34]];
+    
+    for (var i = 0; i < _0PzWl3.length; i ++) {
+        _IQXTDQk = _IQXTDQk.substring(0, _0PzWl3[i][0]) + _IQXTDQk.substring(_0PzWl3[i][1]);
+    }
+
+    return _IQXTDQk;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>Nginx try_files &amp; PHP PATH_INFO</h1>
+</header>
+<article>
+    <pre><code>try_files $uri $uri/ /index.php?$query_string;
+</code></pre><p>这句的话得意思是依次找 文件，找目录，找index.php 在找的过程中，如果存在就执行并不往后面找了。这个是 Nginx 语法，可以到 <a href="http://nginx.org">http://nginx.org</a> 官网上查阅相关文档。</p><p>我遇到的问题是，在 Laravel 文档中说，为了使用 PATH_INFO 需要加上这句话。这句话很早我就看见了，可是一直不明白为什么要加这句话？不应该是加 PATH_INFO 相关的吗？</p><p>直到今天，我在本地安装使用 Typecho 这款程序，调式的时候发现如下(已在 Nginx 上面中配置了 try_files 语句，及 Typecho 后台已开启 永久链接-》地址重写功能)：<br>访问URL：<a href="http://www.typecho.test/archives/1.html">http://www.typecho.test/archives/1.html</a> 没报错，能够正常访问，这里并没有设置 PATH_INFO 重写，为什么还能访问？于是我在 index.php 第一行写死 var_dump($_SERVER);exit; 再次访问看看，经过反复测试，PATH_INFO 上是空字符串，而唯一有变化的是 REQUEST_URI 。<br>我差不多明白了，可能就像 ThinkPHP 那样，有一个优先级，如果 PATH_INFO 为空，继而拿 REQUEST_URI 去匹配路由（用这个方法可以解决，有些服务器不支持 PATH_INFO 模式，且只需要代码上简单兼容一下就好了，太好了）。</p><p>访问URL：/abc?q=1<br>try_files /index.php?/abc?q=1<br>为什么 REQUEST_URI 确是 /abc?q=1 而 QUERY_string 是 q=1，可能 cgi 是这样执行的，但 Nginx 或者 cgi 拿的是当前URL的信息，也就覆盖掉了，我想可能是这样的，我不确定。</p>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/143.html" title="Golang test">Golang test</a></li>
+        <li>Next: <a href="/archives/145.html" title="Laravel 6.x">Laravel 6.x</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-144" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/144.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/144.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

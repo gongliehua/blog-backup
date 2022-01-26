@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>PHP 字符串截取函数 - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="PHP就有函数实现字符串截取substr,mb_substr,mb_strimwidth1.substr遇到中文可能就会乱码,因为1个中文字符占3个位(指占3个字母的长度)2.mb_substr..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="PHP 字符串截取函数 &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/83.html" />
+<link rel="alternate" type="application/rdf+xml" title="PHP 字符串截取函数 &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/83.html" />
+<link rel="alternate" type="application/atom+xml" title="PHP 字符串截取函数 &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/83.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-83'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-83'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-83'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _irzp = '5d3'//'o'
++//'q'
+'q'+''///*'v6l'*/'v6l'
++'e4d'//'kw'
++'4'//'UWw'
++'7yh'//'7yh'
++/* '0ms'//'0ms' */''+/* 'J'//'J' */''+//'a7'
+'be'+''///*'r'*/'r'
++//'C68'
+'f4c'+'86'//'ev'
++//'9'
+'947'+//'f'
+'2'+//'3P'
+'c9'+//'pEa'
+'6'+//'gR'
+'8'+/* 'dw'//'dw' */''+/* 'KX'//'KX' */''+//'kAu'
+'kAu'+//'t3'
+'e'+//'s0'
+'43'+''///*'33'*/'33'
++'4c'//'tH'
++/* 'Z'//'Z' */''+//'3J'
+'5'+'b'//'QJ'
++''///*'ye1'*/'ye1'
++//'fu'
+'35'+//'N'
+'e', _DIcFvj = [[3,4],[7,10],[22,25]];
+    
+    for (var i = 0; i < _DIcFvj.length; i ++) {
+        _irzp = _irzp.substring(0, _DIcFvj[i][0]) + _irzp.substring(_DIcFvj[i][1]);
+    }
+
+    return _irzp;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>PHP 字符串截取函数</h1>
+</header>
+<article>
+    <p>PHP就有函数实现字符串截取substr,mb_substr,mb_strimwidth<br>1.substr遇到中文可能就会乱码,因为1个中文字符占3个位(指占3个字母的长度)<br>2.mb_substr可以截取中文字符串,不过截取出来的宽度不一样(2个字母占一个中文字符的宽度)<br>3.mb_strimwidth这个函数我使用起来总觉得不对劲,width为什么要+3才能开始截取?如果width写太少它就会乱取</p><p>以上种种问题，我就想自己写个函数，解决字符串不会乱码,宽度不会有偏差。<br>1.第一个问题，substr会乱码，我看过emlog有个函数解决了这个问题，大致是截取后算出其中包含的中文字符长度,因为中文字符占3位,缺少几位就补几位就可以。</p><pre><code>/**
+ * 截取编码为utf8的字符串
+ *
+ * @param string $strings 预处理字符串
+ * @param int $start 开始处 eg:0
+ * @param int $length 截取长度
+ */
+function subString($strings, $start, $length) {
+    if (function_exists('mb_substr') &amp;&amp; function_exists('mb_strlen')) {
+        $sub_str = mb_substr($strings, $start, $length, 'utf8');
+        return mb_strlen($sub_str, 'utf8') &lt; mb_strlen($strings, 'utf8') ? $sub_str . '...' : $sub_str;
+    }
+    $str = substr($strings, $start, $length);
+    $char = 0;
+    for ($i = 0; $i &lt; strlen($str); $i++) {
+        if (ord($str[$i]) &gt;= 128)
+            $char++;
+    }
+    $str2 = substr($strings, $start, $length + 1);
+    $str3 = substr($strings, $start, $length + 2);
+    if ($char % 3 == 1) {
+        if ($length &lt;= strlen($strings)) {
+            $str3 = $str3 .= '...';
+        }
+        return $str3;
+    }
+    if ($char % 3 == 2) {
+        if ($length &lt;= strlen($strings)) {
+            $str2 = $str2 .= '...';
+        }
+        return $str2;
+    }
+    if ($char % 3 == 0) {
+        if ($length &lt;= strlen($strings)) {
+            $str = $str .= '...';
+        }
+        return $str;
+    }
+}
+
+// 自己写的带有注释函数(上面函数式是从emlog复制过来的)
+// 其实把有mb_*的函数,就没必要自己写这个函数了,写这个函数只是为了兼容没有mb_*函数时(就像ci里面，core/compare里面会有一些其它版本的兼容函数)
+function str_limit($string, $start, $length)
+{
+    $str = substr($string, $start, $length);
+    
+    // 应该是计算出中文字符长度(可能是ord出&gt;=128就是中文字符的一部分,这里注意1个中文字符占3位)
+    $char = 0;
+    for ($i = 0; $i &lt; $length; $i++) {
+         if (ord($str[$i]) &gt;= 128) {
+             $char++;
+         }
+    }
+    
+    // 由于中文字符是占3位，那么截取出来的可能是1位都不缺，或者缺1位，或者缺2位
+    $str1 = substr($string, $start, $length + 1);
+    $str2 = substr($string, $start, $length + 2);
+    if ($char %3  == 0) {
+        if ($length &lt;= strlen($string)) {
+            $str .= '...';
+        }
+        return $str;
+    }
+    if ($char % 3 == 1){
+        if ($length &lt;= strlen($string)) {
+            $str2 .= '...';
+        }
+        return $str2;
+    }
+    if ($char % 3 == 2){
+        if ($length &lt;= strlen($string)) {
+            $str1 .= '...';
+        }
+        return $str1;
+    }
+}
+var_dump(str_limit(&quot;nihao你好呀的重庆&quot;, 0, 10));
+</code></pre><pre><code>// 解决中英文字符串截取宽度问题
+// (用法 str_limit($string, 2*x, '...')其中2表示一个中文字符的长度,也就是说以中文字符长度为准)
+function str_limit($string, $length, $end = '...')
+{
+    // 已经截取的字符串
+    $str = '';
+    // 已经截取到的长度
+    $len = 0;
+    // 计算最后1个中文字符已经截取到第几位了
+    $endLen = 0;
+    // 被截取字符串的长度
+    $strLen = strlen($string);
+    // 循环字符串长度去截取
+    for ($i = 0; $i &lt; $strLen; $i++) {
+        // 没有字符串可截取就跳出去
+        if (!isset($string[$i])) {
+            break;
+        }
+        // 如果已经截取完成(中文字符可能直接进2位,所以这里要写&gt;=号)
+        if ($len &gt;= $length) {
+            break;
+        }
+        // 把截取到字符拼接到另一个变量,计算该字符是中文字还是英文字,如果是中文字需截取到3位才能算2个长度(也就是说最后1个字符的长度可能超出了预料的长度)
+        $str .= $string[$i];
+        if (ord($string[$i]) &gt;= 128) {
+            $endLen++;
+            if ($endLen == 3) {
+                $len += 2;
+                $endLen = 0;
+            }
+        } else {
+            $len++;
+        }
+    }
+    
+    // 上面截取最后1个字符可能超出预算,因为最后1个字符可能是中文
+    // 所以最多超出2个位(3位表示1个中文字符),1个中文字符等于2个字母长度,误差也就是1个字母长度
+    // 这里也就没必去为了整个长度就1个字母长度的误差,再次计算,性能不划算(后面有时间看看再怎么优化把,其实已经满足现在的需求了,有取就有舍的道理,如反过来想,如果截取的最后一个字符是中文,那么原本却只要1的字母的长度,那么最后一个中文字符就得丢掉,也就会丢一个字母长度)
+    
+    // 处理被截取的字符串长度 大于 截取的长度,后面拼接...
+    if (isset($string[$i + 1])) {
+        $str .= $end;
+    }
+    return $str;
+}</code></pre>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/82.html" title="MySQL 5.7 开启查询日志">MySQL 5.7 开启查询日志</a></li>
+        <li>Next: <a href="/archives/84.html" title="a-z 字母累增排号">a-z 字母累增排号</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-83" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/83.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/83.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

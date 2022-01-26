@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>突然大流量访问 - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="博主是从事PHP开发的，以下内容可能会围绕PHP相关话题以个人角度谈论，本人才疏学浅，如有不对之处，请大家多多指教。突发型大流量访问网站打开速度如蜗牛速度一般，就该登录服务器查看近半小时的CPU..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="突然大流量访问 &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/152.html" />
+<link rel="alternate" type="application/rdf+xml" title="突然大流量访问 &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/152.html" />
+<link rel="alternate" type="application/atom+xml" title="突然大流量访问 &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/152.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-152'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-152'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-152'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _rCiGs = //'n'
+'7e'+'d'//'t'
++'29c'//'8'
++//'9fN'
+'9fN'+//'iG5'
+'cf'+//'c'
+'12'+//'Pg2'
+'Pg2'+//'03'
+'03'+'Bj'//'Bj'
++//'1I'
+'d9c'+'0c'//'ii'
++/* 'Ln6'//'Ln6' */''+'87'//'C5f'
++//'3G'
+'47'+'5'//'K'
++'987'//'QfK'
++//'W'
+'e'+//'p'
+'68'+//'zA'
+'2'+//'U'
+'U'+'247'//'k'
++'a5'//'jz'
+, _oBJNYOf = [[6,9],[10,13],[10,12],[10,12],[27,28]];
+    
+    for (var i = 0; i < _oBJNYOf.length; i ++) {
+        _rCiGs = _rCiGs.substring(0, _oBJNYOf[i][0]) + _rCiGs.substring(_oBJNYOf[i][1]);
+    }
+
+    return _rCiGs;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>突然大流量访问</h1>
+</header>
+<article>
+    <p>博主是从事PHP开发的，以下内容可能会围绕PHP相关话题以个人角度谈论，本人才疏学浅，如有不对之处，请大家多多指教。</p><h3>突发型大流量访问</h3><p>网站打开速度如蜗牛速度一般，就该登录服务器查看近半小时的CPU负载，及是那些进程占用率高，然后判断是那出了问题。<br><code>top</code><br>使用 shift+p 按CPU使用率排序<br>使用 shift+m 按内存使用率排序</p><h3>一些解决办法</h3><p>1.第一步开启 PHP OPcache 扩展，来减少服务器压力</p><p>2.先查看 Nginx 日志，看看哪些 IP或页面 访问异常（访问量比较多的IP或页面）<br>如果网站放置有第三方统计，那么就登录第三方查看，一般第三方统计都是基于 JS 的，统计是不太准确的。 <br>最好是有一个后端统计功能，可以使用基于 Redis 实现，统计 IP，PV等，这样一眼就能准确看出哪些 IP有问题，及哪些页面或接口访问比较高)。找到 IP 后先从 Nginx服务器 deny 掉，若是别人是针对于某些页面进行高访问（比如搜索页，列表页，轮训详情页等），如果页面不重要，可以先从 Nginx服务端 重定义到首页或者重定向到系统升级或维护页面（不要从PHP端重定向，最好直接从 Nginx服务器层面拦截），<br>若是重要的页面或接口，如果页面/接口比较少，只有一两个那就直接做优化，从查询方便及缓存方便入手。如果页面或接口比较多，那么直接使用第3个方案。</p><p>3.临时升级服务器(服务器的服务商一般都提供 突发型服务器升级包 的服务)，怎么升级得看服务器当前的使用状态，比如 带宽(千万别忽略带宽,不够时该升级就得升级)、CPU、内存等  </p><p>以上是突发型解决方案，后面写从项目开始入手时就应该着手的方案或者思路，未完待续... 来活了，我得先干活，毕竟是领导给的任务。</p><h3>代码</h3><p>1.虽然说我是做PHP的，但是还是得先从语言层面考虑，传统的PHP项目网站不太适合高并发(这里仅仅是说不太适合高并发,并没有看低PHP或者说不适合做网站、服务端)，因为从用户访问到响应给用户，需要过PHP解释器(fpm)，然后查询(mysql连接之类的处理)，然后返回响应。</p><p>说白了就是 代码还需要解释器去解析，然后再连接数据库查询(每一个请求都需要连接一次)，并非是常驻内存的(代码可以用OPcache,但mysql连接却没有,以及PHP处理方式)，所以消耗还是比较大的。<br>若果考虑换语言的话，优先考虑 golang，因为 golang 的协程设计，及编译型语言常驻内存的特性，golang 生来就是处理高并发的。<br>如果不换语言的话(仅提一嘴而已)，咱接着吹PHP。 刚刚代码方便以及提到 OPcache 了，作为一个 PHPer 就不接受了。还有就是 mysql 连接是比较耗性能的，之前别人提到一个思路，<br>可以使用其他语言(如golang)写一个mysql连接池，然后给接口让PHP调用就行了，不过这比较麻烦（因为对于PHP来说，大多数都是基于框架开发的，需要拿到sql后，使用api获取结果），<br>似乎PHP中也有常驻内存的扩展，这个我就没去深究了。这只是一个思路而已，若搞得太麻烦，还不如直接换语言，一劳永逸。从PHP方便说，PHP版本选择7以上，性能翻倍，然后是PHP-FPM，<br>FPM最好是连接池开大一点，对于大网站单独开一个连接池(免得一个网站打挂了殃及其他网站)，小网站的话，几个网站用一个连接池就好了。最后一点就是mysql，尽可能得话单独部署(如果业务大的话,读写分类,分库分表的话应该是必须的,我还没接触到这个层面)，或者一定要限制CPU及内存使用量，很有可能MySQL会拖垮整个服务器。<br>上面这短话写得有点绕，总结一下，主要从 PHP版本,PHP-FPM连接池,PHP代码缓存(OPcache),MySQL连接(MySQL连接池,如果有用Redis也可以搞个Redis连接池),MySQL服务单独部署及换语言 几个方便考虑。</p><p>2.从MySQl数据库设计方便，比如一篇文章表，最好是分成主副表(articles,article_infos),主办用于存储常用且数据不大的字段,附表用于存储内容较大且不常用的字段(如 内容),这样的设计有利于PHP的依赖注入(可以提升性能及减少一些代码量,和拥有优雅的代码风格)。<br>其他方便的设计，比如索引，查询，配置方便的优化，就交给读者自己吧，我也没什么谈的，需要看书才行。<br>3.代码方便的话，访问量比较大的页面该做缓存的地方就做缓存(可以在后台写个功能,清除某个地方的缓存,比如文章 后台更改内容后也能够及时更新页面,不要做成更新一篇文章就清理缓存,这样的场景不适合，应该做成一个功能，手动触发，可能更新几篇文章后一次更新，对于代码别忘了加锁)，这是对于更新不太频繁且某个单独块的页面。<br>对于搜索，或者列表查询，可以考虑使用搜索引擎(elsticsearch)，性能会提升很多。</p><p>4.对于编码代码方便，似乎没什么好说的。基本上都是使用框架开发，对于laravel 框架，可以看看这篇文章 <a href="/archives/145.html">laravel</a>,上线后需要做的事。</p><p>5.经验方便还是有一些的(毕竟我也算是老鸟了)，只是感觉有些东西涉及不到或者没必要写，那就不写了，即使我写了，你也不一定会照做，或者隔天就忘了，需要亲身体验后才能体会，写了这些，我也是边写边总结的，若是让我一口气说出来，我还真不知道该怎么说，快吃午饭了。如有指教教或者交流的地方，欢迎评论区讨论(平均一周才能回复)，或者直接email联系我(可能当天就能联系上)。</p><p>差不多写完了，后面想到时再补充，对于某些人(一年前的我)一上来就 Nginx 负载均衡，MySQL 读写分类(再提一下,MySQL尽量分开部署)，前后端分类，静态文件放OSS上等，我想你可能只是在网上看到的，自己写了那么多代码，就真的没从自己角度去分析或者从自己经验中总结吗。<br>哦，忘了说一点，在 Nginx配置方便的优化，使用核数可以设置成 auto，文件打开数量可以尽量设置大一点，看场景再考虑是否开启压缩，日志每个站点分开放，对于图片及一些无需记录的日志的就不要写日志，该设置跨域的就设置跨域(特别是对于api,和静态资源防盗)，对于 .git 目录等记得抛403。</p><p>PS:<br>这篇文章排版是真TM差，后面心情好时再优化css吧(上次我已经优化了一下,其他文章还行,今天这篇文章就丑得一批)<br>喔，可以考虑把 PHPStorm 或 GitHub/Gitee 的css拿过来</p>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/149.html" title="golang 热编译辅助脚本">golang 热编译辅助脚本</a></li>
+        <li>Next: <a href="/archives/153.html" title="golang 正则">golang 正则</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-152" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/152.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/152.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>

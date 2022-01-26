@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>Strval - 默认分类</title>
+<link>http://strval.com/category/default/</link>
+<atom:link href="http://strval.com/feed/category/default/" rel="self" type="application/rss+xml" />
+<language>zh-CN</language>
+<description>只是一个默认分类</description>
+<lastBuildDate>Wed, 15 Dec 2021 05:56:00 +0000</lastBuildDate>
+<pubDate>Wed, 15 Dec 2021 05:56:00 +0000</pubDate>
+<item>
+<title>Composer</title>
+<link>http://strval.com/archives/156.html</link>
+<guid>http://strval.com/archives/156.html</guid>
+<pubDate>Wed, 15 Dec 2021 05:56:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[Composer 一些用法老是忘记，然后又去看文档，这里记录一下^~ 区别版本号一般是这样定义的：主版本号.次版本号.修订号  ^ 指小于主版本号+1~ 指小于次版本号+1如果版本号的定义仅 主...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>Composer 一些用法老是忘记，然后又去看文档，这里记录一下</p><h2>^~ 区别</h2><p>版本号一般是这样定义的：主版本号.次版本号.修订号  <br>^ 指小于主版本号+1<br>~ 指小于次版本号+1<br>如果版本号的定义仅 主版本号.次版本号，那么^~是没什么差别的(1.0 之前的版本是有差别的)</p><p>原文地址：<br><a href="https://docs.phpcomposer.com/01-basic-usage.html#Package-Versions">https://docs.phpcomposer.com/01-basic-usage.html#Package-Versions</a>  <br><a href="https://getcomposer.org/doc/articles/versions.md">https://getcomposer.org/doc/articles/versions.md</a></p><h2>自动加载</h2><pre><code># psr-4
+{
+    &quot;autoload&quot;: {
+        &quot;psr-4&quot;: {
+            &quot;Monolog\\&quot;: &quot;src/&quot;,
+            &quot;Vendor\\Namespace\\&quot;: &quot;&quot;
+        }
+    }
+}
+
+{
+    &quot;autoload&quot;: {
+        &quot;psr-4&quot;: { &quot;Monolog\\&quot;: [&quot;src/&quot;, &quot;lib/&quot;] }
+    }
+}
+
+{
+    &quot;autoload&quot;: {
+        &quot;psr-4&quot;: { &quot;&quot;: &quot;src/&quot; }
+    }
+}
+
+# classmap
+{
+    &quot;autoload&quot;: {
+        &quot;classmap&quot;: [&quot;src/&quot;, &quot;lib/&quot;, &quot;Something.php&quot;]
+    }
+}
+
+# file
+{
+    &quot;autoload&quot;: {
+        &quot;files&quot;: [&quot;src/MyLibrary/functions.php&quot;]
+    }
+}
+</code></pre><p>原文地址：<br><a href="https://docs.phpcomposer.com/04-schema.html#autoload">https://docs.phpcomposer.com/04-schema.html#autoload</a></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/156.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/156.html</wfw:commentRss>
+</item>
+<item>
+<title>Laravel ORM Where</title>
+<link>http://strval.com/archives/155.html</link>
+<guid>http://strval.com/archives/155.html</guid>
+<pubDate>Mon, 06 Dec 2021 03:00:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[其实Laravel ORM Where方法非常好用1.where($column, $operator = null, $value = null, $boolean = 'and')2.whe...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>其实Laravel ORM Where方法非常好用</p><pre><code>1.where($column, $operator = null, $value = null, $boolean = 'and')
+2.where(Closure())
+3.where(array())
+    [
+        // where
+        0=&gt;[$column, $operator = null, $value = null, $boolean = 'and'],
+        // key=value
+        'key','value',
+    ]
+</code></pre>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/155.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/155.html</wfw:commentRss>
+</item>
+<item>
+<title>Linux 命令</title>
+<link>http://strval.com/archives/154.html</link>
+<guid>http://strval.com/archives/154.html</guid>
+<pubDate>Sat, 04 Dec 2021 04:51:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[记录一下容易忘记的命令系统# 关机poweroff# 重启reboot# 查看系统内核与系统版本等信息,要查看当前系统版本的详细信息则需要查看 /etc/redhat-releaseuname#...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>记录一下容易忘记的命令</p><h2>系统</h2><pre><code># 关机
+poweroff
+# 重启
+reboot
+# 查看系统内核与系统版本等信息,要查看当前系统版本的详细信息则需要查看 /etc/redhat-release
+uname
+# 当前登入主机的用户终端信息
+who
+# 查看登录记录
+last
+# 查看历史命令,注意-c参数
+history</code></pre><h2>进程</h2><pre><code># 查看进程状态,-aux 表示所有进程,用户以及其他详细信息,显示没有控制终端的进程
+ps
+# 动态监视进程信息
+top
+# 查看负载信息
+uptime
+# 根据服务查找pid
+pidof
+# 根据pid杀掉进程
+kill
+# 根据服务名称杀掉所有进程
+killall</code></pre><h2>文件</h2><pre><code>cat
+more
+head
+fail
+tr
+cut
+wc
+stat</code></pre><h2>磁盘</h2><pre><code>fdisk
+mkfs
+mkswap
+swapon
+mount
+umount
+df
+du</code></pre>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/154.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/154.html</wfw:commentRss>
+</item>
+<item>
+<title>golang 正则</title>
+<link>http://strval.com/archives/153.html</link>
+<guid>http://strval.com/archives/153.html</guid>
+<pubDate>Sun, 21 Nov 2021 12:38:59 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[// 通过正则判断是否匹配func Match(pattern string, b []byte) (matched bool, error error)func MatchString(pat...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<pre><code>// 通过正则判断是否匹配
+func Match(pattern string, b []byte) (matched bool, error error)
+func MatchString(pattern string, s string) (matched bool, error error)
+func MatchReader(pattern string, r io.RuneReader) (matched bool, error error)
+
+// 通过正则获取内容
+func (re *Regexp) Find(b []byte) []byte
+func (re *Regexp) FindIndex(b []byte) (loc []int)
+func (re *Regexp) FindSubmatch(b []byte) [][]byte
+func (re *Regexp) FindSubmatchIndex(b []byte) []int
+
+func (re *Regexp) FindAll(b []byte, n int) [][]byte
+func (re *Regexp) FindAllIndex(b []byte, n int) [][]int
+func (re *Regexp) FindAllSubmatch(b []byte, n int) [][][]byte
+func (re *Regexp) FindAllSubmatchIndex(b []byte, n int) [][]int
+
+func (re *Regexp) FindString(s string) string
+func (re *Regexp) FindStringIndex(s string) (loc []int)
+func (re *Regexp) FindStringSubmatch(s string) []string
+func (re *Regexp) FindStringSubmatchIndex(s string) []int
+
+func (re *Regexp) FindAllString(s string, n int) []string
+func (re *Regexp) FindAllStringIndex(s string, n int) [][]int
+func (re *Regexp) FindAllStringSubmatch(s string, n int) [][]string
+func (re *Regexp) FindAllStringSubmatchIndex(s string, n int) [][]int
+
+func (re *Regexp) FindReaderIndex(r io.RuneReader) (loc []int)
+func (re *Regexp) FindReaderSubmatchIndex(r io.RuneReader) []int</code></pre>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/153.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/153.html</wfw:commentRss>
+</item>
+<item>
+<title>突然大流量访问</title>
+<link>http://strval.com/archives/152.html</link>
+<guid>http://strval.com/archives/152.html</guid>
+<pubDate>Fri, 19 Nov 2021 04:01:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[博主是从事PHP开发的，以下内容可能会围绕PHP相关话题以个人角度谈论，本人才疏学浅，如有不对之处，请大家多多指教。突发型大流量访问网站打开速度如蜗牛速度一般，就该登录服务器查看近半小时的CPU...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>博主是从事PHP开发的，以下内容可能会围绕PHP相关话题以个人角度谈论，本人才疏学浅，如有不对之处，请大家多多指教。</p><h3>突发型大流量访问</h3><p>网站打开速度如蜗牛速度一般，就该登录服务器查看近半小时的CPU负载，及是那些进程占用率高，然后判断是那出了问题。<br><code>top</code><br>使用 shift+p 按CPU使用率排序<br>使用 shift+m 按内存使用率排序</p><h3>一些解决办法</h3><p>1.第一步开启 PHP OPcache 扩展，来减少服务器压力</p><p>2.先查看 Nginx 日志，看看哪些 IP或页面 访问异常（访问量比较多的IP或页面）<br>如果网站放置有第三方统计，那么就登录第三方查看，一般第三方统计都是基于 JS 的，统计是不太准确的。 <br>最好是有一个后端统计功能，可以使用基于 Redis 实现，统计 IP，PV等，这样一眼就能准确看出哪些 IP有问题，及哪些页面或接口访问比较高)。找到 IP 后先从 Nginx服务器 deny 掉，若是别人是针对于某些页面进行高访问（比如搜索页，列表页，轮训详情页等），如果页面不重要，可以先从 Nginx服务端 重定义到首页或者重定向到系统升级或维护页面（不要从PHP端重定向，最好直接从 Nginx服务器层面拦截），<br>若是重要的页面或接口，如果页面/接口比较少，只有一两个那就直接做优化，从查询方便及缓存方便入手。如果页面或接口比较多，那么直接使用第3个方案。</p><p>3.临时升级服务器(服务器的服务商一般都提供 突发型服务器升级包 的服务)，怎么升级得看服务器当前的使用状态，比如 带宽(千万别忽略带宽,不够时该升级就得升级)、CPU、内存等  </p><p>以上是突发型解决方案，后面写从项目开始入手时就应该着手的方案或者思路，未完待续... 来活了，我得先干活，毕竟是领导给的任务。</p><h3>代码</h3><p>1.虽然说我是做PHP的，但是还是得先从语言层面考虑，传统的PHP项目网站不太适合高并发(这里仅仅是说不太适合高并发,并没有看低PHP或者说不适合做网站、服务端)，因为从用户访问到响应给用户，需要过PHP解释器(fpm)，然后查询(mysql连接之类的处理)，然后返回响应。</p><p>说白了就是 代码还需要解释器去解析，然后再连接数据库查询(每一个请求都需要连接一次)，并非是常驻内存的(代码可以用OPcache,但mysql连接却没有,以及PHP处理方式)，所以消耗还是比较大的。<br>若果考虑换语言的话，优先考虑 golang，因为 golang 的协程设计，及编译型语言常驻内存的特性，golang 生来就是处理高并发的。<br>如果不换语言的话(仅提一嘴而已)，咱接着吹PHP。 刚刚代码方便以及提到 OPcache 了，作为一个 PHPer 就不接受了。还有就是 mysql 连接是比较耗性能的，之前别人提到一个思路，<br>可以使用其他语言(如golang)写一个mysql连接池，然后给接口让PHP调用就行了，不过这比较麻烦（因为对于PHP来说，大多数都是基于框架开发的，需要拿到sql后，使用api获取结果），<br>似乎PHP中也有常驻内存的扩展，这个我就没去深究了。这只是一个思路而已，若搞得太麻烦，还不如直接换语言，一劳永逸。从PHP方便说，PHP版本选择7以上，性能翻倍，然后是PHP-FPM，<br>FPM最好是连接池开大一点，对于大网站单独开一个连接池(免得一个网站打挂了殃及其他网站)，小网站的话，几个网站用一个连接池就好了。最后一点就是mysql，尽可能得话单独部署(如果业务大的话,读写分类,分库分表的话应该是必须的,我还没接触到这个层面)，或者一定要限制CPU及内存使用量，很有可能MySQL会拖垮整个服务器。<br>上面这短话写得有点绕，总结一下，主要从 PHP版本,PHP-FPM连接池,PHP代码缓存(OPcache),MySQL连接(MySQL连接池,如果有用Redis也可以搞个Redis连接池),MySQL服务单独部署及换语言 几个方便考虑。</p><p>2.从MySQl数据库设计方便，比如一篇文章表，最好是分成主副表(articles,article_infos),主办用于存储常用且数据不大的字段,附表用于存储内容较大且不常用的字段(如 内容),这样的设计有利于PHP的依赖注入(可以提升性能及减少一些代码量,和拥有优雅的代码风格)。<br>其他方便的设计，比如索引，查询，配置方便的优化，就交给读者自己吧，我也没什么谈的，需要看书才行。<br>3.代码方便的话，访问量比较大的页面该做缓存的地方就做缓存(可以在后台写个功能,清除某个地方的缓存,比如文章 后台更改内容后也能够及时更新页面,不要做成更新一篇文章就清理缓存,这样的场景不适合，应该做成一个功能，手动触发，可能更新几篇文章后一次更新，对于代码别忘了加锁)，这是对于更新不太频繁且某个单独块的页面。<br>对于搜索，或者列表查询，可以考虑使用搜索引擎(elsticsearch)，性能会提升很多。</p><p>4.对于编码代码方便，似乎没什么好说的。基本上都是使用框架开发，对于laravel 框架，可以看看这篇文章 <a href="/archives/145.html">laravel</a>,上线后需要做的事。</p><p>5.经验方便还是有一些的(毕竟我也算是老鸟了)，只是感觉有些东西涉及不到或者没必要写，那就不写了，即使我写了，你也不一定会照做，或者隔天就忘了，需要亲身体验后才能体会，写了这些，我也是边写边总结的，若是让我一口气说出来，我还真不知道该怎么说，快吃午饭了。如有指教教或者交流的地方，欢迎评论区讨论(平均一周才能回复)，或者直接email联系我(可能当天就能联系上)。</p><p>差不多写完了，后面想到时再补充，对于某些人(一年前的我)一上来就 Nginx 负载均衡，MySQL 读写分类(再提一下,MySQL尽量分开部署)，前后端分类，静态文件放OSS上等，我想你可能只是在网上看到的，自己写了那么多代码，就真的没从自己角度去分析或者从自己经验中总结吗。<br>哦，忘了说一点，在 Nginx配置方便的优化，使用核数可以设置成 auto，文件打开数量可以尽量设置大一点，看场景再考虑是否开启压缩，日志每个站点分开放，对于图片及一些无需记录的日志的就不要写日志，该设置跨域的就设置跨域(特别是对于api,和静态资源防盗)，对于 .git 目录等记得抛403。</p><p>PS:<br>这篇文章排版是真TM差，后面心情好时再优化css吧(上次我已经优化了一下,其他文章还行,今天这篇文章就丑得一批)<br>喔，可以考虑把 PHPStorm 或 GitHub/Gitee 的css拿过来</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/152.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/152.html</wfw:commentRss>
+</item>
+<item>
+<title>golang 热编译辅助脚本</title>
+<link>http://strval.com/archives/149.html</link>
+<guid>http://strval.com/archives/149.html</guid>
+<pubDate>Thu, 18 Nov 2021 06:15:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[main.bat@echo offREM 软件描述echo *===============================================================ech...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>main.bat</p><pre><code>@echo off
+
+REM 软件描述
+echo *===============================================================
+echo  检测 golang 项目源代码，发生变化后编译并运行
+echo  注意：该辅助依靠 git 实现，需要手动执行 git init 后再运行该辅助
+echo  Powered by c3RydmFsQHFxLmNvbQ== Date: 2021/11/18 Version: 1.0.1
+echo *===============================================================
+
+REM 定义项目路径
+set projectPath=&quot;D:\Go_WorkSpace\src\study&quot;
+
+REM 定义循环次数
+set /A i=0
+
+REM 循环检测begin
+:labelCheck
+
+REM 检测是否发生变化,若发生变化则执行编译
+cd /d %projectPath% &amp;&amp; git status | findstr /C:&quot;git&quot; &amp;&amp; (git add . &amp; git commit -m fix &amp; start %~dp0sub_compile.bat)
+
+REM 需要间隔1/4秒,否则怕CPU着不住(原本应该是1/4秒的,因为精确到毫秒比较麻烦,再加上git处理也需要时间,那就精确到秒吧)
+timeout /T 1 /NOBREAK &gt;nul
+
+REM 打印循环次数
+set /A i+=1
+set echostr=已检测运行 %i% 次
+tasklist /FI &quot;IMAGENAME eq main.exe&quot; /FI &quot;SESSIONNAME eq Console&quot; | findstr /C:&quot;main.exe&quot; &gt;nul || set echostr=%echostr% :-(
+echo %echostr%
+
+REM 循环检测end
+goto labelCheck
+</code></pre><p>sub_compile.bat</p><pre><code>@echo off
+
+REM 编译并运行程序
+REM 该文件由其他文件调用
+
+REM 定义项目路径
+REM set projectPath=&quot;D:\Go_WorkSpace\src\study&quot;
+if not defined projectPath (
+    echo missing projectPath variable
+    ping /n 3 127.0.0.1&gt;nul
+    exit
+)
+
+REM 杀掉已经运行的程序
+taskkill /F /IM main.exe&gt;nul 2&gt;nul
+
+REM 重新编译运行
+cd /d %projectPath%\main &amp;&amp; go build &amp;&amp; main.exe -c ../config.json -t ../public -tp ../templates
+
+REM 延迟几秒后退出,方便运行结果(被其他文件调用时,就没必要延迟退出了)
+REM ping /n 3 127.0.0.1&gt;nul
+
+exit
+</code></pre>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/149.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/149.html</wfw:commentRss>
+</item>
+<item>
+<title>谷歌浏览器自带的游戏</title>
+<link>http://strval.com/archives/148.html</link>
+<guid>http://strval.com/archives/148.html</guid>
+<pubDate>Sat, 13 Nov 2021 08:51:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[没网的情况下，按下 空格键真不愧是 Google 的风格，Android 上也有类似的游戏。天天用浏览器，现在才发现 [捂脸]]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h3>没网的情况下，按下 <code>空格键</code></h3><p>真不愧是 Google 的风格，Android 上也有类似的游戏。天天用浏览器，现在才发现 [捂脸]</p><p><img src="http://strval.com/usr/uploads/2021/11/3520191756.png" alt="20211113.png" title="20211113.png"></p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/148.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/148.html</wfw:commentRss>
+</item>
+<item>
+<title>没有打开或者运行某个APP, 也能推送消息</title>
+<link>http://strval.com/archives/146.html</link>
+<guid>http://strval.com/archives/146.html</guid>
+<pubDate>Mon, 08 Nov 2021 06:30:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[早期 Android 手机系统、品牌鱼龙混杂，乱七八糟的，硬件跟不上软件的节奏，即使手机没存储空间了，各大软件厂商(非系统厂商)都还是要推荐安装它的软件，生怕自己没位置一样。早期火热的品牌有 中...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<p>早期 Android 手机系统、品牌鱼龙混杂，乱七八糟的，硬件跟不上软件的节奏，即使手机没存储空间了，各大软件厂商(非系统厂商)都还是要推荐安装它的软件，生怕自己没位置一样。<br>早期火热的品牌有 中兴、金立、酷派、朵唯、联想、诺基亚等，当然这里只是举例了现在市场上几乎看不见的品牌。<br>现在的市场已经被大厂商给包了(如 小米、华为、OPPO、VIVO等)，几乎看不见之前举例的品牌，或者是杂牌机。</p><p>在 Android 上，有个权限叫开机自启动，跟电脑上的自启动是差不多的意思，以前的手机，系统资源不够使用，为什么让系统流程些，我都会把所有软件的自启动都给关闭掉。如果软件启动后，时不时就会给你推送一些消息(当然你可以给它设置权限，它推送的消息就不会出现在你眼前或者状态栏了)。</p><p>我是非常反感 APP 给推送消息的，因为推送的几乎都是一些没用的消息，搞得状态栏消息一推一推的。就跟打广告一样，推销自己的东西，实际上 low 得一匹，东西也不咋样，只不是为了占到系统的一部分资源，它可能就觉得是占到整个市场的资源，这样只会适得其反。</p><p>2020年，我换了新一部新的手机(Mi 10)，我之前也用过好几个小米的手机，因为它的UI非常的漂亮，干净，功能也贴心，实在，深受广大用户喜爱，我也喜欢。<br>我主要是看中一点 系统干净，不像杂牌机那种，不管是界面，还是软件都眼花缭乱的。拿到手后，一如既往的禁止所有软件 自动启动。但事实上我只要一打开数据，通知栏就会出现各种APP推送的消息。<br>我以为是系统的自启动管理出 bug 了，管不住这些软件了，可能是这些软件利用 Android 新版本的特性而无视自启动，那么小米系统也太 low 了吧，我之前一直觉得小米系统软件做的不错，没想到还出这幺蛾子。</p><p>直达 2021年11月，我想让阿里云的企业邮箱 收到邮件后，能够在微信上通知我，似乎没有阿里云企业邮箱的小程序之类的，没办法我只能看看QQ邮箱了，最终可能也只能是阿里云企业邮箱收到邮件后，转发到QQ邮箱了。在看QQ邮箱客户端时(我手机上一直都安装着和使用 QQ邮箱)，发现了 左上角头像-&gt;功能设置-&gt;隐私-&gt;第三方SDK 中的描述，终于解答了我一年多来的困惑。</p><p>软件并没有启动，也能推送消息(特别是一段时间后 打开数据就有消息推送)，其实是系统推的，并不是软件推的。</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/146.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/146.html</wfw:commentRss>
+</item>
+<item>
+<title>Laravel 6.x</title>
+<link>http://strval.com/archives/145.html</link>
+<guid>http://strval.com/archives/145.html</guid>
+<pubDate>Sat, 16 Oct 2021 15:21:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[安装laravel 6.x 版本要求 php &gt;= 7.2.5storage & bootstrap/cache 目录，需要权限使用缓存使用 redis 需要安装 predis/predi...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<h3>安装</h3><ol><li>laravel 6.x 版本要求 php &gt;= 7.2.5</li><li>storage & bootstrap/cache 目录，需要权限</li></ol><h3>使用</h3><ol><li>缓存使用 redis 需要安装 predis/predis ~1.0 包</li><li>session 也可以使用 redis 驱动</li><li>在调试页面隐藏环境变量(config/app.php debug_blacklist)</li></ol><h3>使用</h3><ol><li>路由参数可以使用正则约束( -&gt;where('id', '[A-Za-z]+')，where(['id' =&gt; '[0-9]+', 'name' =&gt; '[a-z]+']) )</li><li>路由限流(直接在路由上写 middleware( 'throttle:60,1') )</li><li>URL可以签名(也可以生成过期的零时签名) signedRoute，可用于邮箱验证等</li><li>Email 认证 功能 laravel 已经实现，参考 安全相关-》Email 认证，重置密码 功能也实现了。邮件发送 在 综合话题-&gt;邮件发送</li><li>错误闪存后可以使用($errors-&gt;any() $errors-&gt;all()，$error('title') {{ $message }} @enderror)</li><li>更复杂的表单验证 (php artisan make:request StoreBlogPost)</li><li>csrf字段 页面上可以使用 @csrf 来放在表单中(之前的方法似乎已然支持)</li><li>表单伪造可以写成 @method('PUT')</li><li>原子锁 综合话题-》缓存系统-》原子锁 (可以考虑在 同一时间仅一个操作时 使用，如订单处理)</li><li>队列应该考虑使用 进程监控器 sudo apt-get install supervisor</li><li>Artisan::call(), Artisan::queue() 可以在非shell调用命令，且可以使用队列实现</li></ol><h3>上线</h3><ol><li>自动加载器改进(composer install --optimize-autoloader --no-dev)</li><li>config 可以缓存起来(php artisan config:cache)</li><li>路由 可以缓存起来(php artisan route:cache)</li><li>日志类型(.env) 使用 daily</li><li>缓存使用 redis</li><li>session 使用 redis</li></ol><h3>其他(开发)</h3><ol><li>移动 AppUser 到 AppModelsUser，并修改所使用到的地方</li><li>修改配置 config/app.php timezone,locale</li><li>删除 web/api.php 中的默认路由(routes 目录下的文件中的类使用 use 引入)</li></ol>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/145.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/145.html</wfw:commentRss>
+</item>
+<item>
+<title>Nginx try_files &amp;amp; PHP PATH_INFO</title>
+<link>http://strval.com/archives/144.html</link>
+<guid>http://strval.com/archives/144.html</guid>
+<pubDate>Tue, 14 Sep 2021 09:03:00 +0000</pubDate>
+<dc:creator>admin</dc:creator>
+<description><![CDATA[try_files $uri $uri/ /index.php?$query_string;这句的话得意思是依次找 文件，找目录，找index.php 在找的过程中，如果存在就执行并不往后面找了...]]></description>
+<content:encoded xml:lang="zh-CN"><![CDATA[
+<pre><code>try_files $uri $uri/ /index.php?$query_string;
+</code></pre><p>这句的话得意思是依次找 文件，找目录，找index.php 在找的过程中，如果存在就执行并不往后面找了。这个是 Nginx 语法，可以到 <a href="http://nginx.org">http://nginx.org</a> 官网上查阅相关文档。</p><p>我遇到的问题是，在 Laravel 文档中说，为了使用 PATH_INFO 需要加上这句话。这句话很早我就看见了，可是一直不明白为什么要加这句话？不应该是加 PATH_INFO 相关的吗？</p><p>直到今天，我在本地安装使用 Typecho 这款程序，调式的时候发现如下(已在 Nginx 上面中配置了 try_files 语句，及 Typecho 后台已开启 永久链接-》地址重写功能)：<br>访问URL：<a href="http://www.typecho.test/archives/1.html">http://www.typecho.test/archives/1.html</a> 没报错，能够正常访问，这里并没有设置 PATH_INFO 重写，为什么还能访问？于是我在 index.php 第一行写死 var_dump($_SERVER);exit; 再次访问看看，经过反复测试，PATH_INFO 上是空字符串，而唯一有变化的是 REQUEST_URI 。<br>我差不多明白了，可能就像 ThinkPHP 那样，有一个优先级，如果 PATH_INFO 为空，继而拿 REQUEST_URI 去匹配路由（用这个方法可以解决，有些服务器不支持 PATH_INFO 模式，且只需要代码上简单兼容一下就好了，太好了）。</p><p>访问URL：/abc?q=1<br>try_files /index.php?/abc?q=1<br>为什么 REQUEST_URI 确是 /abc?q=1 而 QUERY_string 是 q=1，可能 cgi 是这样执行的，但 Nginx 或者 cgi 拿的是当前URL的信息，也就覆盖掉了，我想可能是这样的，我不确定。</p>
+]]></content:encoded>
+<slash:comments>0</slash:comments>
+<comments>http://strval.com/archives/144.html#comments</comments>
+<wfw:commentRss>http://strval.com/feed/archives/144.html</wfw:commentRss>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>PHP 常用到的一些写法 - Strval</title>
+
+    <!-- 使用url函数转换相关路径 -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/usr/themes/simple/style.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.6.1/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 通过自有函数输出HTML头部信息 -->
+    <meta name="description" content="有哪些操作惊艳到你了呢？这里记录我觉得很nice的语法PHP相关1.foreach 引用语法$result = [['id'=&amp;gt;1,'name'=&amp;gt;'user1']];foreach..." />
+<meta name="generator" content="Typecho 1.1/17.10.30" />
+<meta name="template" content="simple" />
+<link rel="pingback" href="/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/action/xmlrpc" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/action/xmlrpc" />
+<link rel="alternate" type="application/rss+xml" title="PHP 常用到的一些写法 &raquo; Strval &raquo; RSS 2.0" href="/feed/archives/77.html" />
+<link rel="alternate" type="application/rdf+xml" title="PHP 常用到的一些写法 &raquo; Strval &raquo; RSS 1.0" href="/feed/rss/archives/77.html" />
+<link rel="alternate" type="application/atom+xml" title="PHP 常用到的一些写法 &raquo; Strval &raquo; ATOM 1.0" href="/feed/atom/archives/77.html" />
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-77'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-77'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-77'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _bM8 = '9'//'DDX'
++//'5Rt'
+'00'+//'Nf3'
+'bce'+//'Njn'
+'b91'+/* 'Ci'//'Ci' */''+/* 'EWv'//'EWv' */''+'ab'//'pst'
++''///*'s4'*/'s4'
++'621'//'W'
++//'Zi5'
+'77'+'05'//'Aq'
++//'D'
+'4'+'uH'//'uH'
++//'es'
+'fc0'+//'XT'
+'03a'+//'pPj'
+'e'+''///*'sqD'*/'sqD'
++//'AgQ'
+'7b'+//'Nee'
+'a8'+'94'//'So7'
+, _eVstns9 = [[19,21]];
+    
+    for (var i = 0; i < _eVstns9.length; i ++) {
+        _bM8 = _bM8.substring(0, _eVstns9[i][0]) + _bM8.substring(_eVstns9[i][1]);
+    }
+
+    return _bM8;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+
+<nav>
+    <a href="/">首页</a>
+            <a href="/52.html" title="归档">归档</a>
+        <a href="/75.html" title="分类">分类</a>
+        <a href="/76.html" title="标签">标签</a>
+        <a href="/44.html" title="链接">链接</a>
+        <a href="/start-page.html" title="关于">关于</a>
+    </nav>
+
+<header>
+    <h1>PHP 常用到的一些写法</h1>
+</header>
+<article>
+    <p>有哪些操作惊艳到你了呢？这里记录我觉得很nice的语法</p><p>PHP相关<br>1.foreach 引用语法<br>$result = [<br>['id'=&gt;1,'name'=&gt;'user1']<br>];<br>foreach ($result as $key=&gt;&$value) {<br>$value['nick'] = 'xxx';<br>}</p><p>2.if and 多判断<br>$has = 1;<br>if (in_array($has, [1,2,3,4])) {}</p><p>3.一个函数需要传多个参数时,可以换个写法使代码看起来不太那么糟糕<br>func(<br>$arg1,<br>$arg2,<br>[$arg1,$arg2]<br>);</p><p>laravel相关<br>1.模型查询使用get之后,判断是否有数据不能直接判断(因为get返回的似乎是一个对象),只能通过count函数或者-&gt;count()进行判断是否有数据<br>2.模型使用使用pluck()查询之后,返回的不一定是数组,所以在pluck之后最好使用-toArray()语法<br>3.模型使用find方法,可以传数组<br>4.模型关联的链式操作是可以写where的<br>5.laravel的orm是真的强,真的好用</p><p>mysql相关<br>1.查询,或者写条件时 字段可以使用``包裹起来(来自typecho的Query),可以防止关键字问题。<br>2.值 要使用写 ''包裹起来(条件等于的值,或者是插入的值)，不管是整数还是字符串都要包裹起来(主要是为了安全和标准)</p>
+    <ul class="page-navigator">
+        <li>Prev: <a href="/archives/68.html" title="CentOS PHP7.x安装event扩展">CentOS PHP7.x安装event扩展</a></li>
+        <li>Next: <a href="/archives/79.html" title="PHP 引用传递的一些疑问">PHP 引用传递的一些疑问</a></li>
+    </ul>
+</article><!-- end #main-->
+
+<div id="comments">
+        
+        <div id="respond-post-77" class="respond">
+        <div class="cancel-comment-reply">
+        <a id="cancel-comment-reply-link" href="/archives/77.html" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
+    
+    	<h3 id="response">添加新评论</h3>
+    	<form method="post" action="http://strval.com/archives/77.html/comment" id="comment-form" role="form">
+                		<p>
+                <label for="author" class="required">称呼</label>
+    			<input type="text" name="author" id="author" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="mail" class="required">Email</label>
+    			<input type="email" name="mail" id="mail" class="text" value="" required />
+    		</p>
+    		<p>
+                <label for="url">网站</label>
+    			<input type="url" name="url" id="url" class="text" placeholder="http://" value="" />
+    		</p>
+                		<p>
+                <label for="textarea" class="required">内容</label>
+                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" style="max-width: 100%;" required></textarea>
+            </p>
+    		<p>
+                <button type="submit" class="submit">提交评论</button>
+            </p>
+    	</form>
+    </div>
+    </div>
+
+<footer>
+	&copy; 2022 <a href="/">Strval</a>.
+    由 <a href="http://www.typecho.org">Typecho</a> 强力驱动.
+<script src="/usr/themes/simple/say.js"></script>
+</footer><!-- end #footer -->
+
+
+
+<script>
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JOzPdC1KgEXnm5aN",ck:"JOzPdC1KgEXnm5aN"});
+console.log("https://v6.51.la/land/JOzPdC1KgEXnm5aN");
+</script>
+
+</body>
+</html>
